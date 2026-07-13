@@ -17,6 +17,7 @@ export const communityPermanentMemberTagManifest: PluginManifest = {
   configSchema: communityPermanentMemberTagConfigSchema,
   dangerousActions: ['group.setMemberTag'],
   backgroundJobs: [],
+  cancellation: { workflows: [] },
   assistant: {
     summary: 'Keeps the bot per-group WhatsApp member tag aligned with an operator-configured scope value.',
     useCases: [
@@ -35,4 +36,3 @@ export const communityPermanentMemberTagManifest: PluginManifest = {
     ]
   }
 };
-
