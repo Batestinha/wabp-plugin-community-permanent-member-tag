@@ -11,7 +11,7 @@ export const communityPermanentMemberTagManifest: PluginManifest = {
   descriptionKey: 'official.community-permanent-member-tag.description',
   defaultMessages: communityPermanentMemberTagMessages,
   commands: [],
-  eventSubscriptions: ['participant.change'],
+  eventSubscriptions: ['participant.change', 'group.scope.covered'],
   requiredPermissions: ['plugin.configure'],
   requiredBotCapabilities: [],
   configSchema: communityPermanentMemberTagConfigSchema,
@@ -22,7 +22,7 @@ export const communityPermanentMemberTagManifest: PluginManifest = {
     summary: 'Keeps the bot per-group WhatsApp member tag aligned with an operator-configured scope value.',
     useCases: [
       'Explain the configured bot member tag for a managed scope.',
-      'Apply the configured tag retroactively across groups covered by a scope.',
+      'Apply the configured tag automatically when a group becomes covered by a managed scope.',
       'Keep the bot tag consistent when the bot joins a newly covered group.'
     ],
     prerequisites: [

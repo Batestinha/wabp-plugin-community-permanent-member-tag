@@ -30,7 +30,7 @@ function control(
     sensitivity: { sensitive: false, redact: 'none' },
     auditAction: 'operator_console.plugin_config.update',
     relatedCommandIds: [],
-    relatedActionIds: ['official.community-permanent-member-tag.applyScope']
+    relatedActionIds: []
   });
 }
 

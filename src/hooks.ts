@@ -10,6 +10,17 @@ const BOT_ARRIVAL_ACTIONS = new Set<PluginParticipantChangeEvent['action']>(['jo
 
 export function createCommunityPermanentMemberTagHooks(context: PluginRuntimeContext): PluginRuntimeHooks {
   return {
+    async onGroupScopeCovered(event) {
+      const config = parseCommunityPermanentMemberTagConfig(await context.configFor(event.scopeId));
+      if (!config.memberTag.trim()) {
+        return;
+      }
+      if (config.exemptGroupChatIds.includes(event.chatId)) {
+        return;
+      }
+      return [memberTagAction(event.chatId, config.memberTag)];
+    },
+
     async onParticipantChange(event) {
       if (!BOT_ARRIVAL_ACTIONS.has(event.action)) {
         return;
