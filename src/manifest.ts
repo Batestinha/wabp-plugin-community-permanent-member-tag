@@ -11,18 +11,19 @@ export const communityPermanentMemberTagManifest: PluginManifest = {
   descriptionKey: 'official.community-permanent-member-tag.description',
   defaultMessages: communityPermanentMemberTagMessages,
   commands: [],
-  eventSubscriptions: ['participant.change', 'group.scope.covered'],
+  eventSubscriptions: ['participant.change', 'group.scope.covered', 'plugin.job'],
   requiredPermissions: ['plugin.configure'],
   requiredBotCapabilities: [],
   configSchema: communityPermanentMemberTagConfigSchema,
   dangerousActions: ['group.setMemberTag'],
-  backgroundJobs: [],
+  backgroundJobs: ['reconcile-covered-groups'],
   cancellation: { workflows: [] },
   assistant: {
     summary: 'Keeps the bot per-group WhatsApp member tag aligned with an operator-configured scope value.',
     useCases: [
       'Explain the configured bot member tag for a managed scope.',
       'Apply the configured tag automatically when a group becomes covered by a managed scope.',
+      'Reconcile already-covered groups automatically when the bot runtime starts.',
       'Keep the bot tag consistent when the bot joins a newly covered group.'
     ],
     prerequisites: [
