@@ -23,7 +23,7 @@ function control(
     configurable: true,
     storage: { kind: 'plugin-scope-config', pluginId: COMMUNITY_PERMANENT_MEMBER_TAG_PLUGIN_ID, path },
     schema,
-    ui,
+    ui: { helpText: description, ...ui },
     ...(defaultValue !== undefined ? { defaultValue } : {}),
     restartRequirement: 'NO_RESTART',
     dangerous: false,
