@@ -11,6 +11,21 @@ export const communityPermanentMemberTagManifest: PluginManifest = {
   descriptionKey: 'official.community-permanent-member-tag.description',
   defaultMessages: communityPermanentMemberTagMessages,
   commands: [],
+  help: {
+    featureId: 'member-tags',
+    titleKey: 'official.community-permanent-member-tag.help.feature.title',
+    summaryKey: 'official.community-permanent-member-tag.help.feature.summary',
+    order: 90,
+    aliases: ['member tag', 'community tag'],
+    topics: [{
+      topicId: 'sync-member-tag',
+      titleKey: 'official.community-permanent-member-tag.help.sync.title',
+      summaryKey: 'official.community-permanent-member-tag.help.sync.summary',
+      instructionKeys: ['official.community-permanent-member-tag.help.sync.instruction'],
+      keywords: ['tag', 'label', 'community', 'bot'],
+      availability: { invocation: 'either', permission: 'plugin.configure' }
+    }]
+  },
   eventSubscriptions: ['participant.change', 'group.scope.covered', 'plugin.job'],
   requiredPermissions: ['plugin.configure'],
   requiredBotCapabilities: [],
