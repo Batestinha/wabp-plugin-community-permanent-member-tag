@@ -36,7 +36,10 @@ export function createCommunityPermanentMemberTagHooks(context: PluginRuntimeCon
       if (!eventBotWasAffected(event)) {
         return;
       }
-      const config = parseCommunityPermanentMemberTagConfig(await context.configFor(event.scopeId, event.actorWid));
+      const config = parseCommunityPermanentMemberTagConfig(await context.configFor(
+        event.scopeId,
+        event.actorIdentity?.identityId
+      ));
       if (!config.applyOnBotJoin || !config.memberTag.trim()) {
         return;
       }
@@ -77,12 +80,9 @@ export function memberTagAction(groupWid: string, tag: string): PluginAction {
 }
 
 function eventBotWasAffected(event: PluginParticipantChangeEvent): boolean {
-  const botWids = new Set([
-    event.botWid,
-    ...(event.botWids ?? [])
-  ].filter((value): value is string => Boolean(value)));
-  if (botWids.size === 0) {
+  const botIdentityIds = new Set(event.botIdentityIds);
+  if (botIdentityIds.size === 0) {
     return false;
   }
-  return event.affectedWids.some((wid) => botWids.has(wid));
+  return event.affectedIdentities.some((identity) => botIdentityIds.has(identity.identityId));
 }
