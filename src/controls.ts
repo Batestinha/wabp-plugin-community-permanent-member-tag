@@ -1,5 +1,5 @@
-import { defineControl } from '../../../platform/operatorConsole/controlCatalog/define';
-import type { ControlDescriptor, ControlSchemaMetadata, ControlUiHint } from '../../../platform/operatorConsole/controlCatalog/types';
+import { defineControl } from '../../../../packages/plugin-sdk/src/controls';
+import type { ControlDescriptor, ControlSchemaMetadata, ControlUiHint } from '../../../../packages/plugin-sdk/src/controls-types';
 import { COMMUNITY_PERMANENT_MEMBER_TAG_MAX_LENGTH, COMMUNITY_PERMANENT_MEMBER_TAG_PLUGIN_ID } from './config';
 
 function control(

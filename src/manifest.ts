@@ -1,12 +1,12 @@
-import type { PluginManifest } from '../../../platform/pluginRuntime/manifest';
+import type { PluginManifest } from '../../../../packages/plugin-sdk/src/manifest';
 import { communityPermanentMemberTagConfigSchema, COMMUNITY_PERMANENT_MEMBER_TAG_PLUGIN_ID } from './config';
 import { communityPermanentMemberTagMessages } from './messages';
 
 export const communityPermanentMemberTagManifest: PluginManifest = {
   pluginId: COMMUNITY_PERMANENT_MEMBER_TAG_PLUGIN_ID,
   kind: 'managed_group',
-  version: '0.1.0',
-  coreApiRange: '>=0.2.0',
+  version: '0.1.1',
+  coreApiRange: '^0.3.0',
   messageNamespace: COMMUNITY_PERMANENT_MEMBER_TAG_PLUGIN_ID,
   descriptionKey: 'official.community-permanent-member-tag.description',
   defaultMessages: communityPermanentMemberTagMessages,
