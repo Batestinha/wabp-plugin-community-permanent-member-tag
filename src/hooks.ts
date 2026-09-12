@@ -1,6 +1,6 @@
-import type { PluginAction } from '../../../../packages/plugin-sdk/src/actions';
-import type { PluginHookContext as PluginRuntimeContext } from '../../../../packages/plugin-sdk/src/hook-plugin';
-import type { PluginJobEvent, PluginParticipantChangeEvent, PluginRuntimeHooks } from '../../../../packages/plugin-sdk/src/hooks';
+import type { PluginAction } from '@wabs/plugin-sdk/actions';
+import type { PluginHookContext as PluginRuntimeContext } from '@wabs/plugin-sdk/hook-plugin';
+import type { PluginJobEvent, PluginParticipantChangeEvent, PluginRuntimeHooks } from '@wabs/plugin-sdk/hooks';
 import {
   COMMUNITY_PERMANENT_MEMBER_TAG_PLUGIN_ID,
   parseCommunityPermanentMemberTagConfig

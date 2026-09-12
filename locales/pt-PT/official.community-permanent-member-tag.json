@@ -1,0 +1,8 @@
+{
+  "official.community-permanent-member-tag.description": "Mantem a etiqueta de membro do bot alinhada com um valor configurado para o ambito.",
+  "official.community-permanent-member-tag.help.feature.title": "Etiqueta permanente de membro",
+  "official.community-permanent-member-tag.help.feature.summary": "Mantém a etiqueta do bot consistente nos grupos cobertos da comunidade.",
+  "official.community-permanent-member-tag.help.sync.title": "Sincronizar a etiqueta do bot",
+  "official.community-permanent-member-tag.help.sync.summary": "Aplica a etiqueta configurada do âmbito quando os grupos ficam cobertos ou o bot entra.",
+  "official.community-permanent-member-tag.help.sync.instruction": "Esta funcionalidade é automática; os administradores definem a etiqueta e as exceções no painel do operador."
+}

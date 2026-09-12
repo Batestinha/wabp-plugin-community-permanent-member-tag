@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "sourceRepository": "https://github.com/Batestinha/wabp",
+  "sourceCommit": "0c32647aec6ad71579db7d32999d3ec971af1818",
+  "sourceDirectory": "src/plugins/official/community-permanent-member-tag",
+  "sourceTreeSha": "63276a925bba0d753c723a230e520576e1da6839",
+  "extractedHistoryCommit": "dc6f1cac957aed8fc9e33b679f48486d76f2bfc4",
+  "sdk": {
+    "version": "0.3.1",
+    "path": "vendor/wabs-plugin-sdk-0.3.1-78a8ff1d1be4.tgz",
+    "sha256": "78a8ff1d1be4b53062d0a708d143f83a896991fbb5587cbb39277209a9927b7c",
+    "sourceDirectory": "packages/plugin-sdk",
+    "sourceCommit": "0c32647aec6ad71579db7d32999d3ec971af1818"
+  }
+}

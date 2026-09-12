@@ -1,4 +1,4 @@
-import type { MessageCatalog } from '../../../../packages/plugin-sdk/src/i18n';
+import type { MessageCatalog } from '@wabs/plugin-sdk/i18n';
 
 export const communityPermanentMemberTagMessages: MessageCatalog = {
   'official.community-permanent-member-tag.description': 'Keeps the bot group member tag aligned with a configured scope value.',

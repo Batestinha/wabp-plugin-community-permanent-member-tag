@@ -1,4 +1,4 @@
-import type { PluginManifest } from '../../../../packages/plugin-sdk/src/manifest';
+import type { PluginManifest } from '@wabs/plugin-sdk/manifest';
 import { communityPermanentMemberTagConfigSchema, COMMUNITY_PERMANENT_MEMBER_TAG_PLUGIN_ID } from './config';
 import { communityPermanentMemberTagMessages } from './messages';
 
