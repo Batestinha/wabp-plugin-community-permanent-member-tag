@@ -11,6 +11,16 @@ export const COMMUNITY_MEMBER_TAG_RECONCILE_JOB = 'reconcile-covered-groups';
 
 export function createCommunityPermanentMemberTagHooks(context: PluginRuntimeContext): PluginRuntimeHooks {
   return {
+    async onRuntimeReady(event) {
+      if (!event.firstReadyForIdentity) return;
+      if (!context.listEnabledScopes || !context.enqueuePluginJob) {
+        throw new Error('Member tag reconciliation requires host-owned scope and queue capabilities.');
+      }
+      for (const scope of await context.listEnabledScopes()) {
+        await context.enqueuePluginJob({ jobName: COMMUNITY_MEMBER_TAG_RECONCILE_JOB,
+          scopeId: scope.scopeId, payload: { trigger: 'runtime-ready' } });
+      }
+    },
     async onGroupScopeCovered(event) {
       const config = parseCommunityPermanentMemberTagConfig(await context.configFor(event.scopeId));
       if (!config.memberTag.trim()) {
