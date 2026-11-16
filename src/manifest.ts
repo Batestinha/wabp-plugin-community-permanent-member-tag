@@ -5,8 +5,8 @@ import { communityPermanentMemberTagMessages } from './messages';
 export const communityPermanentMemberTagManifest: PluginManifest = {
   pluginId: COMMUNITY_PERMANENT_MEMBER_TAG_PLUGIN_ID,
   kind: 'managed_group',
-  version: '0.1.2',
-  coreApiRange: '^0.3.1',
+  version: '0.2.0',
+  coreApiRange: '^0.4.0',
   messageNamespace: COMMUNITY_PERMANENT_MEMBER_TAG_PLUGIN_ID,
   descriptionKey: 'official.community-permanent-member-tag.description',
   defaultMessages: communityPermanentMemberTagMessages,
