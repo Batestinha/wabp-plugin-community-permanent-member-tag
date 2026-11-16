@@ -11,3 +11,13 @@ For development, run `npm ci --ignore-scripts`, `npm test`, then `npm run releas
 `provenance.json` records the imported source history and exact SDK input. Runtime imports use the SDK contract, with no host or sibling plugin source dependency.
 
 Runtime readiness schedules reconciliation through the host-owned job queue for currently enabled scopes. Saved tags and group exemptions continue to control every effect.
+
+## Command interaction contract
+
+This release requires WABP core API 0.4 and the matching plugin SDK. Commands
+declare invocation eligibility and the audience and length of their conversation
+through `interactionPolicy`; plugins without commands retain an empty command
+list. The host owns group-to-PM notices, the two-question allowance for brief
+clarification, and routing across assistant execution and recovered flows. Personal
+guided workflows stay private, with domain publications delivered through their
+existing authorized group publication paths.
