@@ -1,6 +1,6 @@
 {
   "name": "@wabs/plugin-community-permanent-member-tag",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Keeps the bot group member tag aligned with a configured scope value.",
   "license": "MIT",
   "private": true,

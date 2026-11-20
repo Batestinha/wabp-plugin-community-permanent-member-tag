@@ -2,7 +2,7 @@
 
 Keeps the bot group member tag aligned with a configured scope value.
 
-Standalone WABS package `official.community-permanent-member-tag` version `0.1.2`, requiring WABP core API `^0.3.1`. The archive includes its runtime dependencies and Portuguese translations. WABP owns scope configuration, enabled state, identity resolution, ephemeral state and action authorization; extracting the code preserves their identifiers and stored values.
+Standalone WABS package `official.community-permanent-member-tag` version `0.1.3`, requiring WABP core API `^0.3.1`. The archive includes its runtime dependencies and Portuguese translations. WABP owns scope configuration, enabled state, identity resolution, ephemeral state and action authorization; extracting the code preserves their identifiers and stored values.
 
 Install through a trusted WABS registry entry. Installation and scope enablement are separate operations. The publisher signs exact archive bytes; registry branding alone does not establish trust.
 
