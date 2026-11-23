@@ -7,7 +7,7 @@ export const communityPermanentMemberTagManifest: PluginManifest & { name: strin
   author: { name: 'Batestinha', url: 'https://github.com/Batestinha' },
   pluginId: COMMUNITY_PERMANENT_MEMBER_TAG_PLUGIN_ID,
   kind: 'managed_group',
-  version: '0.1.4',
+  version: '0.1.5',
   coreApiRange: '^0.3.1',
   messageNamespace: COMMUNITY_PERMANENT_MEMBER_TAG_PLUGIN_ID,
   descriptionKey: 'official.community-permanent-member-tag.description',
