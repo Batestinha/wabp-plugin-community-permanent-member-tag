@@ -2,10 +2,12 @@ import type { PluginManifest } from '@wabs/plugin-sdk/manifest';
 import { communityPermanentMemberTagConfigSchema, COMMUNITY_PERMANENT_MEMBER_TAG_PLUGIN_ID } from './config';
 import { communityPermanentMemberTagMessages } from './messages';
 
-export const communityPermanentMemberTagManifest: PluginManifest = {
+export const communityPermanentMemberTagManifest: PluginManifest & { name: string; author: { name: string; url: string } } = {
+  name: 'Sticky Member Tags',
+  author: { name: 'Batestinha', url: 'https://github.com/Batestinha' },
   pluginId: COMMUNITY_PERMANENT_MEMBER_TAG_PLUGIN_ID,
   kind: 'managed_group',
-  version: '0.1.3',
+  version: '0.1.4',
   coreApiRange: '^0.3.1',
   messageNamespace: COMMUNITY_PERMANENT_MEMBER_TAG_PLUGIN_ID,
   descriptionKey: 'official.community-permanent-member-tag.description',
@@ -16,7 +18,7 @@ export const communityPermanentMemberTagManifest: PluginManifest = {
     titleKey: 'official.community-permanent-member-tag.help.feature.title',
     summaryKey: 'official.community-permanent-member-tag.help.feature.summary',
     order: 90,
-    aliases: ['member tag', 'community tag'],
+    aliases: ['Etiqueta permanente de membro', 'Permanent Member Tag', 'member tag', 'community tag'],
     topics: [{
       topicId: 'sync-member-tag',
       titleKey: 'official.community-permanent-member-tag.help.sync.title',

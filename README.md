@@ -1,4 +1,4 @@
-# Permanent Member Tag
+# Sticky Member Tags
 
 Keeps the bot group member tag aligned with a configured scope value.
 
