@@ -17,7 +17,7 @@ function control(
     description,
     plane: 'plugin-scope-config',
     domain: 'official-plugin-settings',
-    section: 'Permanent Member Tag',
+    section: 'Sticky Member Tags',
     order,
     visibility: 'bot_admin',
     configurable: true,
