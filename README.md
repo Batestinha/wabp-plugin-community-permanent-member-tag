@@ -2,7 +2,7 @@
 
 Keeps the bot’s own WhatsApp member tag consistent across selected groups. It applies the configured tag when a group comes into scope and can reapply it when the bot joins.
 
-Standalone WABS package `official.community-permanent-member-tag` version `0.1.3`, requiring WABP core API `^0.3.1`. The archive includes its runtime dependencies and Portuguese translations. WABP owns scope configuration, enabled state, identity resolution, ephemeral state and action authorization; extracting the code preserves their identifiers and stored values.
+WABS distributes this plugin as `official.community-permanent-member-tag`. The version and required WABP core API are listed in `wa-plugin.json`. The archive includes its runtime dependencies and Portuguese translations. WABP owns scope configuration, enabled state, identity resolution, ephemeral state and action authorization; extracting the code preserves their identifiers and stored values.
 
 Install through a trusted WABS registry entry. Installation and scope enablement are separate operations. The publisher signs exact archive bytes; registry branding alone does not establish trust.
 
