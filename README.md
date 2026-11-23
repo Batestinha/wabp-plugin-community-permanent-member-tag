@@ -1,6 +1,6 @@
 # Sticky Member Tags
 
-Keeps the bot group member tag aligned with a configured scope value.
+Keeps the bot’s own WhatsApp member tag consistent across selected groups. It applies the configured tag when a group comes into scope and can reapply it when the bot joins.
 
 Standalone WABS package `official.community-permanent-member-tag` version `0.1.3`, requiring WABP core API `^0.3.1`. The archive includes its runtime dependencies and Portuguese translations. WABP owns scope configuration, enabled state, identity resolution, ephemeral state and action authorization; extracting the code preserves their identifiers and stored values.
 
