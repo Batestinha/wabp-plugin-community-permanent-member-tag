@@ -12,7 +12,7 @@ export const communityPermanentMemberTagManifest: PluginManifest & { name: strin
   kind: 'managed_group',
   ...relationships,
   version: '0.1.6',
-  coreApiRange: '^0.3.1',
+  coreApiRange: '^0.3.31',
   messageNamespace: COMMUNITY_PERMANENT_MEMBER_TAG_PLUGIN_ID,
   descriptionKey: 'official.community-permanent-member-tag.description',
   defaultMessages: communityPermanentMemberTagMessages,

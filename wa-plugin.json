@@ -9,7 +9,7 @@
   "description": "Keeps the bot’s own WhatsApp member tag consistent across selected groups. It applies the configured tag when a group comes into scope and can reapply it when the bot joins.",
   "kind": "managed_group",
   "version": "0.1.6",
-  "coreApiRange": "^0.3.1",
+  "coreApiRange": "^0.3.31",
   "entrypoint": "dist/index.js",
   "messageNamespace": "official.community-permanent-member-tag",
   "descriptionKey": "official.community-permanent-member-tag.description",
