@@ -1,6 +1,6 @@
 {
   "name": "@wabs/plugin-community-permanent-member-tag",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Keeps the bot’s own WhatsApp member tag consistent across selected groups. It applies the configured tag when a group comes into scope and can reapply it when the bot joins.",
   "license": "MIT",
   "private": true,
