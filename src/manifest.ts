@@ -6,13 +6,14 @@ const { dependencies, integrations } = require('../wa-plugin.json');
 const relationships = { dependencies, integrations };
 
 export const communityPermanentMemberTagManifest: PluginManifest & { name: string; author: { name: string; url: string } } = {
+  ...{ operationCatalogVersion: require('../wa-plugin.json').operationCatalogVersion, memberSubscriptions: require('../wa-plugin.json').memberSubscriptions },
   name: 'Sticky Member Tags',
   author: { name: 'Batestinha', url: 'https://github.com/Batestinha' },
   pluginId: COMMUNITY_PERMANENT_MEMBER_TAG_PLUGIN_ID,
   kind: 'managed_group',
   ...relationships,
-  version: '0.1.6',
-  coreApiRange: '^0.3.31',
+  version: '0.1.7',
+  coreApiRange: '^0.3.34',
   messageNamespace: COMMUNITY_PERMANENT_MEMBER_TAG_PLUGIN_ID,
   descriptionKey: 'official.community-permanent-member-tag.description',
   defaultMessages: communityPermanentMemberTagMessages,
