@@ -2,13 +2,17 @@ import type { PluginManifest } from '@wabs/plugin-sdk/manifest';
 import { communityPermanentMemberTagConfigSchema, COMMUNITY_PERMANENT_MEMBER_TAG_PLUGIN_ID } from './config';
 import { communityPermanentMemberTagMessages } from './messages';
 
+const { dependencies, integrations } = require('../wa-plugin.json');
+const relationships = { dependencies, integrations };
+
 export const communityPermanentMemberTagManifest: PluginManifest & { name: string; author: { name: string; url: string } } = {
   name: 'Sticky Member Tags',
   author: { name: 'Batestinha', url: 'https://github.com/Batestinha' },
   pluginId: COMMUNITY_PERMANENT_MEMBER_TAG_PLUGIN_ID,
   kind: 'managed_group',
-  version: '0.1.5',
-  coreApiRange: '^0.3.1',
+  ...relationships,
+  version: '0.1.6',
+  coreApiRange: '^0.3.31',
   messageNamespace: COMMUNITY_PERMANENT_MEMBER_TAG_PLUGIN_ID,
   descriptionKey: 'official.community-permanent-member-tag.description',
   defaultMessages: communityPermanentMemberTagMessages,
